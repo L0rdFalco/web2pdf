@@ -1,0 +1,239 @@
+extends base
+
+block content
+    .layout-wrapper.layout-content-navbar
+        include _dash_sidebar
+        .layout-page
+            // Navbar
+            //- nav#layout-navbar.layout-navbar.container-xxl.navbar.navbar-expand-xl.navbar-detached.align-items-center.bg-navbar-theme
+            //-     .layout-menu-toggle.navbar-nav.align-items-xl-center.me-3.me-xl-0.d-xl-none
+            //-         a.nav-item.nav-link.px-0.me-xl-4(href='javascript:void(0)')
+            //-             i.bx.bx-menu.bx-sm
+            //-     #navbar-collapse.navbar-nav-right.d-flex.align-items-center
+            //-         include _dash_search
+            //-         include _dash_dropdown
+
+            .container-xxl.flex-grow-1.container-p-y
+                .row
+                    .col-lg-8.mb-4.order-0
+                        .card
+                            .d-flex.align-items-end.row
+                                .col-sm-7
+                                    .card-body
+                                        h5.card-title.text-primary Hello username
+                                        p.mb-4
+                                            span.fw-bold 111
+                                            |  some tag line about the app functionalities in the dash
+                                        a.btn.btn-sm.btn-outline-primary(href='javascript:;') View detail page
+                                        br
+                                .col-sm-5.text-center.text-sm-left
+                                    .card-body.pb-0.px-0.px-md-4
+                                        img(src='/assets/img/illustrations/man-with-laptop-light.png', height='140', alt='View Badge User', data-app-dark-img='illustrations/man-with-laptop-dark.png', data-app-light-img='illustrations/man-with-laptop-light.png')
+                    .col-lg-4.col-md-4.order-1
+                        .row
+                            .col-lg-6.col-md-12.col-6.mb-4
+                                .card
+                                    .card-body
+                                        .card-title.d-flex.align-items-start.justify-content-between
+                                            .avatar.flex-shrink-0
+                                                img.rounded(src='/assets/img/icons/unicons/chart-success.png', alt='chart success')
+                                            .dropdown
+                                                button#cardOpt3.btn.p-0(type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                                    i.bx.bx-dots-vertical-rounded
+                                                .dropdown-menu.dropdown-menu-end(aria-labelledby='cardOpt3')
+                                                    a.dropdown-item(href='javascript:void(0);') View More
+                                                    a.dropdown-item(href='javascript:void(0);') Delete
+                                        span.fw-semibold.d-block.mb-1 item 1
+                                        h3.card-title.mb-2 item a
+                                        small.text-success.fw-semibold
+                                            i.bx.bx-up-arrow-alt
+                                            |  item b
+                            .col-lg-6.col-md-12.col-6.mb-4
+                                .card
+                                    .card-body
+                                        .card-title.d-flex.align-items-start.justify-content-between
+                                            .avatar.flex-shrink-0
+                                                img.rounded(src='/assets/img/icons/unicons/wallet-info.png', alt='Credit Card')
+                                            .dropdown
+                                                button#cardOpt6.btn.p-0(type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                                    i.bx.bx-dots-vertical-rounded
+                                                .dropdown-menu.dropdown-menu-end(aria-labelledby='cardOpt6')
+                                                    a.dropdown-item(href='javascript:void(0);') View More
+                                                    a.dropdown-item(href='javascript:void(0);') Delete
+                                        span item 2
+                                        h3.card-title.text-nowrap.mb-1 item a
+                                        small.text-success.fw-semibold
+                                            i.bx.bx-up-arrow-alt
+                                            |  item b
+                    // Total Revenue
+                    .col-12.col-lg-8.order-2.order-md-3.order-lg-2.mb-4
+                        .card
+                            h5.card-header list of something important
+                            .table-responsive.text-nowrap
+                                table.table
+                                    thead
+                                        tr
+                                            th url
+                                            th name
+                                            th host
+                                            th Status
+                                            th Actions
+                                    tbody.table-border-bottom-0
+                                        tr
+                                            td
+                                                i.fab.fa-angular.fa-lg.text-danger.me-3
+                                                |  
+                                                strong url 1
+                                            td name 1
+                                            td
+                                                ul.list-unstyled.users-list.m-0.avatar-group.d-flex.align-items-center
+                                                    li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Lilian Fuller')
+                                                        img.rounded-circle(src='/assets/img/avatars/5.png', alt='Avatar')
+                                                    li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Sophia Wilkerson')
+                                                        img.rounded-circle(src='/assets/img/avatars/6.png', alt='Avatar')
+                                                    li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Christina Parker')
+                                                        img.rounded-circle(src='/assets/img/avatars/7.png', alt='Avatar')
+                                            td
+                                                span.badge.bg-label-primary.me-1 Active
+                                            td
+                                                .dropdown
+                                                    button.btn.p-0.dropdown-toggle.hide-arrow(type='button', data-bs-toggle='dropdown')
+                                                        i.bx.bx-dots-vertical-rounded
+                                                    .dropdown-menu
+                                                        a.dropdown-item(href='javascript:void(0);')
+                                                            i.bx.bx-edit-alt.me-1
+                                                                Edit
+                                                        a.dropdown-item(href='javascript:void(0);')
+                                                            i.bx.bx-trash.me-1
+                                                                Delete
+                                        tr
+                                            td
+                                                i.fab.fa-react.fa-lg.text-info.me-3
+                                                |  
+                                                strong url 2
+                                            td name 2
+                                            td
+                                                ul.list-unstyled.users-list.m-0.avatar-group.d-flex.align-items-center
+                                                    li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Lilian Fuller')
+                                                        img.rounded-circle(src='/assets/img/avatars/5.png', alt='Avatar')
+                                                    li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Sophia Wilkerson')
+                                                        img.rounded-circle(src='/assets/img/avatars/6.png', alt='Avatar')
+                                                    li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Christina Parker')
+                                                        img.rounded-circle(src='/assets/img/avatars/7.png', alt='Avatar')
+                                            td
+                                                span.badge.bg-label-success.me-1 Completed
+                                            td
+                                                .dropdown
+                                                    button.btn.p-0.dropdown-toggle.hide-arrow(type='button', data-bs-toggle='dropdown')
+                                                        i.bx.bx-dots-vertical-rounded
+                                                    .dropdown-menu
+                                                        a.dropdown-item(href='javascript:void(0);')
+                                                            i.bx.bx-edit-alt.me-2
+                                                                Edit
+                                                        a.dropdown-item(href='javascript:void(0);')
+                                                            i.bx.bx-trash.me-2
+                                                                Delete
+                                        tr
+                                            td
+                                                i.fab.fa-vuejs.fa-lg.text-success.me-3
+                                                |  
+                                                strong url 3
+                                            td name 3
+                                            td
+                                                ul.list-unstyled.users-list.m-0.avatar-group.d-flex.align-items-center
+                                                    li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Lilian Fuller')
+                                                        img.rounded-circle(src='/assets/img/avatars/5.png', alt='Avatar')
+                                                    li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Sophia Wilkerson')
+                                                        img.rounded-circle(src='/assets/img/avatars/6.png', alt='Avatar')
+                                                    li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Christina Parker')
+                                                        img.rounded-circle(src='/assets/img/avatars/7.png', alt='Avatar')
+                                            td
+                                                span.badge.bg-label-info.me-1 Scheduled
+                                            td
+                                                .dropdown
+                                                    button.btn.p-0.dropdown-toggle.hide-arrow(type='button', data-bs-toggle='dropdown')
+                                                        i.bx.bx-dots-vertical-rounded
+                                                    .dropdown-menu
+                                                        a.dropdown-item(href='javascript:void(0);')
+                                                            i.bx.bx-edit-alt.me-2
+                                                                Edit
+                                                        a.dropdown-item(href='javascript:void(0);')
+                                                            i.bx.bx-trash.me-2
+                                                                Delete
+                                        tr
+                                            td
+                                                i.fab.fa-bootstrap.fa-lg.text-primary.me-3
+                                                |  
+                                                strong url 4
+                                            td name 4
+                                            td
+                                                ul.list-unstyled.users-list.m-0.avatar-group.d-flex.align-items-center
+                                                    li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Lilian Fuller')
+                                                        img.rounded-circle(src='/assets/img/avatars/5.png', alt='Avatar')
+                                                    li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Sophia Wilkerson')
+                                                        img.rounded-circle(src='/assets/img/avatars/6.png', alt='Avatar')
+                                                    li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Christina Parker')
+                                                        img.rounded-circle(src='/assets/img/avatars/7.png', alt='Avatar')
+                                            td
+                                                span.badge.bg-label-warning.me-1 Pending
+                                            td
+                                                .dropdown
+                                                    button.btn.p-0.dropdown-toggle.hide-arrow(type='button', data-bs-toggle='dropdown')
+                                                        i.bx.bx-dots-vertical-rounded
+                                                    .dropdown-menu
+                                                        a.dropdown-item(href='javascript:void(0);')
+                                                            i.bx.bx-edit-alt.me-2
+                                                                Edit
+                                                        a.dropdown-item(href='javascript:void(0);')
+                                                            i.bx.bx-trash.me-2
+                                                                Delete
+                    // / Total Revenue
+                    .col-12.col-md-8.col-lg-4.order-3.order-md-2
+                        .row
+                            .col-6.mb-4
+                                .card
+                                    .card-body
+                                        .card-title.d-flex.align-items-start.justify-content-between
+                                            .avatar.flex-shrink-0
+                                                img.rounded(src='/assets/img/icons/unicons/paypal.png', alt='Credit Card')
+                                            .dropdown
+                                                button#cardOpt4.btn.p-0(type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                                    i.bx.bx-dots-vertical-rounded
+                                                .dropdown-menu.dropdown-menu-end(aria-labelledby='cardOpt4')
+                                                    a.dropdown-item(href='javascript:void(0);') View More
+                                                    a.dropdown-item(href='javascript:void(0);') Delete
+                                        span.d-block.mb-1 item 3
+                                        h3.card-title.text-nowrap.mb-2 item a
+                                        small.text-danger.fw-semibold
+                                            i.bx.bx-down-arrow-alt
+                                            |  item b
+                            .col-6.mb-4
+                                .card
+                                    .card-body
+                                        .card-title.d-flex.align-items-start.justify-content-between
+                                            .avatar.flex-shrink-0
+                                                img.rounded(src='/assets/img/icons/unicons/cc-primary.png', alt='Credit Card')
+                                            .dropdown
+                                                button#cardOpt1.btn.p-0(type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                                    i.bx.bx-dots-vertical-rounded
+                                                .dropdown-menu(aria-labelledby='cardOpt1')
+                                                    a.dropdown-item(href='javascript:void(0);') View More
+                                                    a.dropdown-item(href='javascript:void(0);') Delete
+                                        span.fw-semibold.d-block.mb-1 item 4
+                                        h3.card-title.mb-2 item a
+                                        small.text-success.fw-semibold
+                                            i.bx.bx-up-arrow-alt
+                                            |  item b
+                            //
+                                </div>
+                                <div class="row">
+                            .col-12.mb-4
+                                .card
+                                    .card-body
+                                        .d-flex.justify-content-between.flex-sm-row.flex-column.gap-3
+                                            .d-flex.flex-sm-column.flex-row.align-items-start.justify-content-between
+                                                .card-title
+                                                    h5.text-nowrap.mb-2 important Report
+                                                    span.badge.bg-label-warning.rounded-pill Year 2022
+        include _scripts
+

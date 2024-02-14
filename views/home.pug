@@ -1,0 +1,40 @@
+extends base
+block content 
+    include nav_bar
+    .sidepanel
+        span image toolbox
+        .line
+        span choose font:
+            .select-dropdown
+                select
+                    option(value='font 1') font 1
+                    | &#x9;&#x9;
+                    option(value='font 2') font 2
+                    | &#x9;&#x9;
+                    option(value='font 3') font 3
+        br
+        span font size:
+            input#fontSizeInput(type="number" placeholder = "20")
+        br
+        br
+        span number of copies: 
+            input#copiesNumInput(type="number" placeholder = "59")
+        br
+        br
+        span upload CSV:
+            input#csv-file-input(type="file").file-input
+
+    div.file-container
+        div#wrapper.file-wrapper
+            input#js-file-input(type="file").file-input
+            div.file-content
+                div.file-infos
+                    p.file-icon
+                        span
+                            img(src="/assets/img/icons/unicons/upload.png", alt="", width="200" height="200")
+                        span.icon-shadow
+                        span Click to browse
+                            span.has-drag  or drop file here
+                p#js-file-name.file-name No file selected
+
+    script(src="/js/home.js")         

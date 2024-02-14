@@ -1,0 +1,42 @@
+ul.navbar-nav.flex-row.align-items-center.ms-auto
+    // Place this tag where you want the button to render.
+    li.nav-item.lh-1.me-3
+        a.github-button(href='#', data-icon='octicon-star', data-size='large', data-show-count='true', <='', li='')
+            // User
+    li.nav-item.navbar-dropdown.dropdown-user.dropdown
+        a.github-button(href='#', data-icon='octicon-star', data-size='large', data-show-count='true', <='', li='')
+        a.nav-link.dropdown-toggle.hide-arrow(href='javascript:void(0);', data-bs-toggle='dropdown')
+            .avatar.avatar-online
+                img.w-px-40.h-auto.rounded-circle(src='/assets/img/avatars/1.png', alt='')
+        ul.dropdown-menu.dropdown-menu-end
+            li
+                a.dropdown-item(href='#')
+                    .d-flex
+                        .flex-shrink-0.me-3
+                            .avatar.avatar-online
+                                img.w-px-40.h-auto.rounded-circle(src='/assets/img/avatars/1.png', alt='')
+                        .flex-grow-1
+                            span.fw-semibold.d-block John Doe
+                            small.text-muted Admin
+            //- li
+            //-   .dropdown-divider
+            //- li
+            //-   a.dropdown-item(href='#')
+            //-     i.bx.bx-user.me-2
+            //-     span.align-middle My Profile
+            //- li
+            //-   a.dropdown-item(href='#')
+            //-     i.bx.bx-cog.me-2
+            //-     span.align-middle Settings
+            //- li
+            //-   a.dropdown-item(href='#')
+            //-     span.d-flex.align-items-center.align-middle
+            //-       i.flex-shrink-0.bx.bx-credit-card.me-2
+            //-       span.flex-grow-1.align-middle Billing
+            //-       span.flex-shrink-0.badge.badge-center.rounded-pill.bg-danger.w-px-20.h-px-20 4
+            li
+                .dropdown-divider
+            li
+                a.dropdown-item(href='/users/logout')
+                    i.bx.bx-power-off.me-2
+                    span.align-middle Log Out
